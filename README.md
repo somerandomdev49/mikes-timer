@@ -27,5 +27,6 @@ P / click    -> pause
 S            -> save stuff (leave empty to make default)
 ```
  
+ > Font used is `Retro Gaming` by Daymarius (https://www.dafont.com/retro-gaming.font)
 
 

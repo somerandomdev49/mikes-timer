@@ -19,12 +19,12 @@ escape  -> cancel
 
 ## Timer
 ```
-E            -> Preferences
-space        -> Add a thing
-P            -> pause
-W            -> write default stuff.
-P / click    -> pause
-S            -> save stuff (leave empty to make default)
+P              -> Preferences
+Tab            -> Add a thing
+P              -> pause
+W              -> write default stuff.
+Space / click  -> pause
+S              -> save stuff (leave empty to make default)
 ```
  
  > Font used is `Retro Gaming` by Daymarius (https://www.dafont.com/retro-gaming.font)

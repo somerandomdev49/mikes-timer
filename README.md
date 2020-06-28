@@ -7,8 +7,9 @@ yeh.
 run with something like `export SFML=<SFML PATH> && sh ./run.sh`
 add `-test` to choose and run some tests.
 
-| Arrows        | Move                       |
+| Key           | Action                     |
 |---------------|----------------------------|
+| Arrows        | Move                       |
 | Enter         | Confirm / Select / Newline |
 | Shift + Enter | Confirm / Select           |
 | Escape        | Cancel / Close             |

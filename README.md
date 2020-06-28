@@ -21,7 +21,7 @@ escape  -> cancel
 ```
 P              -> Preferences
 Tab            -> Add a thing
-P              -> pause
+Space          -> pause
 W              -> write default stuff.
 Space / click  -> pause
 S              -> save stuff (leave empty to make default)

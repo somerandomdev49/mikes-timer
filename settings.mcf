@@ -1,6 +1,6 @@
 defaultDescription:recorded time
 defaultFile:test.time
 password:
-quicksaveFileFormat:tests/dima/qs_$TIME_$DATE.time
+quicksaveFileFormat:tests/qs_$TIME_$DATE.time
 timesFile:
 

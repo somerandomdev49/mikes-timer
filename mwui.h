@@ -10,7 +10,7 @@
 #include <SFML/Graphics.hpp>
 #include <iterator>
 #include <algorithm>
-#include "PicoSHA2.h"
+//#include "PicoSHA2.h"
 
 
 /* sample dialog
@@ -90,11 +90,12 @@ namespace mwui
 	//	return container[container.size()-1];
 	//}
 	
-	std::string encrypt(std::string s)
+	std::string encrypt(const std::string &s)
 	{
-		std::string hash_hex_str;
-		picosha2::hash256_hex_string(s, hash_hex_str);
-		return hash_hex_str;
+		//std::string hash_hex_str;
+		//picosha2::hash256_hex_string(s, hash_hex_str);
+		return s;
+		//return hash_hex_str;
 	}
 	
 	// thx, https://thispointer.com/find-and-replace-all-occurrences-of-a-sub-string-in-c/.

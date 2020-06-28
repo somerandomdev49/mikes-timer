@@ -207,6 +207,8 @@ struct timer_capture_t
 void timer_dialog()
 {
 	sf::Text text;
+
+	bool shouldUpdate = false;
 	
 	sf::Time dt;
 	float t = 0.0;
@@ -265,12 +267,15 @@ void timer_dialog()
 			else if ((event.type == sf::Event::KeyPressed) && (event.key.code == sf::Keyboard::Escape))
 				window.close();
 			else if ((event.type == sf::Event::KeyPressed) && (event.key.code == sf::Keyboard::R))
+			{
 				t = 0;
+				shouldUpdate = true;
+			}
 			else if ((event.type == sf::Event::KeyPressed) && (event.key.code == sf::Keyboard::S))
 				save_dialog(t);
-			else if ((event.type == sf::Event::KeyPressed) && (event.key.code == sf::Keyboard::P))
+			else if ((event.type == sf::Event::KeyPressed) && (event.key.code == sf::Keyboard::Space))
 				timerRunning = !timerRunning;
-			else if ((event.type == sf::Event::KeyPressed) && (event.key.code == sf::Keyboard::E))
+			else if ((event.type == sf::Event::KeyPressed) && (event.key.code == sf::Keyboard::P))
 			{
 				//std::cout << settings.password << std::endl;
 				//auto d = mwui::password_dialog("enter the password", "", '*', true);
@@ -308,7 +313,7 @@ void timer_dialog()
 					// std::cout << "heh4" << std::endl;
 				}
 			}
-			else if ((event.type == sf::Event::KeyPressed) && (event.key.code == sf::Keyboard::Space))
+			else if ((event.type == sf::Event::KeyPressed) && (event.key.code == sf::Keyboard::Tab))
 			{
 				captures.push_back({t, -.0f});
 				sf::Text text;
@@ -355,9 +360,10 @@ void timer_dialog()
 #ifdef TERMINAL_OUT
 		std::cout << t << "->" << mwui::format_time(t) << "\r";
 #endif
-		if(timerRunning)
+		if(timerRunning || shouldUpdate)
 		{
 			text.setString(mwui::format_time(t));
+			shouldUpdate = false;
 		}
 	    window.clear();
 	    window.draw(text);

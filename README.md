@@ -6,7 +6,8 @@ yeh.
 
 For me runs with `export SFML=<SFML PATH> && sh ./run.sh`
 >! If using mac, remember to add files from folders in SFML clang installation: `Frameworks` and `extlibs` to `/Library/Frameworks`
-add `-test` to choose and run some tests.
+
+Use `-test` to see what dialogs are avaliable.
 
 ## Controls
 
